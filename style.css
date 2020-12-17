@@ -1,3 +1,22 @@
+body{
+  display: grid;
+  justify-content: center;
+  background-color: rgb(174, 187, 187);
+}
+
+main {
+  display: flex;
+}
+
+.buttonsContainer {
+  display: grid;
+    width: 1px;
+}
+
+.palleteSquad{
+
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
