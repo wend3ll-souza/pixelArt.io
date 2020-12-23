@@ -40,7 +40,6 @@ addEventListener('click', function (event) {
 });
 
 // iro.js
-
 colorPicker = new iro.ColorPicker('#picker', {
 
   width: 260,
