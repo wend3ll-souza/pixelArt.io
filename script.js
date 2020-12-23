@@ -37,21 +37,27 @@ addEventListener('click', function (event) {
       pixel[key].style.background = '#fff';
     };
   };
+  if(event.target.id === 'change-color'){
+    masterColor = "#"+values1.value+values2.value+values3.value;
+    colorPicker.color.hex8String = masterColor;
+  }
 });
 
 // iro.js
 colorPicker = new iro.ColorPicker('#picker', {
+  width: 150,
 
-  width: 260,
-
-  color: '',
-
+  color: '#f00',
 });
 
-var rootStyle = document.querySelector('.color').style;
+const rootStyle = document.querySelector('.color').style;
 colorPicker.on(['color:init', 'color:change'], function(color) {
   rootStyle.setProperty('--iro-color-value', color.rgbString);
-    values.value = color.hexString;
-    masterColor = values.value;
-    color = masterColor;
+  let hex = color.hexString;
+ for (key in hex){
+  values1.value = hex[1] + hex[2];
+  values2.value = hex[3] + hex[4];
+  values3.value = hex[5] + hex[6]
+ }
+ masterColor = hex;
 });
