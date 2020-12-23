@@ -1,22 +1,13 @@
-let masterColor = '#000';
-const palleteLength = document.querySelector('#color-palette').children;
-
-function createpalette(number) {
+let masterColor = '';
+const createpalette = () => {
   const square = document.getElementById('color-palette');
-  for (key = 0; key < number; key++) {
-    let palette = document.createElement('div');
-    palette.className = 'color';
-    square.appendChild(palette);
-  };
-
+  const palette = document.createElement('div');
+  palette.className = 'color';
+  square.appendChild(palette); 
 };
-createpalette(4);
-document.querySelector('#color-palette').children[0].style.backgroundColor = '#000';
-document.querySelector('#color-palette').children[1].style.backgroundColor = '#255';
-document.querySelector('#color-palette').children[2].style.backgroundColor = '#64f';
-document.querySelector('#color-palette').children[3].style.backgroundColor = '#0ff';
+createpalette();
 
-function createSquare(squareLength) {
+const createSquare = (squareLength) => {
   let square = document.getElementById('pixel-board');
   for (key = 0; key < squareLength; key++) {
     let column = document.createElement('div');
@@ -28,7 +19,7 @@ function createSquare(squareLength) {
     square.appendChild(column);
   };
 };
-createSquare(5);
+createSquare(7);
 document.querySelector('#color-palette').children[0].classList.toggle('selected');
 addEventListener('click', function (event) {
   if (event.target.className === 'color') {
@@ -46,22 +37,22 @@ addEventListener('click', function (event) {
       pixel[key].style.background = '#fff';
     };
   };
-  if (event.target.id === 'button') {
-    let inputPixelsNumber = document.querySelector('#board-size').value;
-    if (inputPixelsNumber === '') {
-      alert('Apenas números de 1 a 50, por favor');
-      return;
-    };
-    if (inputPixelsNumber < 5) {
-      inputPixelsNumber = 5;
-    } else if (inputPixelsNumber > 50) {
-      inputPixelsNumber = 50;
-    };
-    let board = document.getElementById('pixel-board');
-    board.innerHTML = '';
-    createSquare(inputPixelsNumber);
-  };
-  if (event.target.id === 'colorNumber') {
-    createpalette(document.querySelector('#colors').value);
-  }
+});
+
+// iro.js
+
+colorPicker = new iro.ColorPicker('#picker', {
+
+  width: 260,
+
+  color: '',
+
+});
+
+var rootStyle = document.querySelector('.color').style;
+colorPicker.on(['color:init', 'color:change'], function(color) {
+  rootStyle.setProperty('--iro-color-value', color.rgbString);
+    values.value = color.hexString;
+    masterColor = values.value;
+    color = masterColor;
 });

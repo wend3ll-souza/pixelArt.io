@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
+        <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script> 
         <title>Paleta de Cores</title>
     </head>
     <body>
@@ -12,13 +13,9 @@
         </header>
         <section id="color-palette"></section>
         <button id="clear-board">Limpar</button>
-        <label for="board-size">Tamanho</label>
-        <input type="number" min='1' max='50' id="board-size" placeholder="Digite um número 5 a 50" value="">
-        <button id="button">+</button>
-        <label for="colors">Número de Cores</label>
-        <input type="number" min='1' max='50' id="colors" placeholder="Digite um número 5 a 50" value="">
-        <button id="colorNumber">+</button>
         <section id="pixel-board"></section>
+        <input type="text" id="values" value>
+        <div id="picker"></div>
     </body>
     <script src="./script.js"></script>
 </html>
