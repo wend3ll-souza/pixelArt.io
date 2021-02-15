@@ -1,18 +1,23 @@
+* {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: rgba(85, 85, 85, 0.5);
+}
+
+.lobster {
+  font-family: lobster;
+  overflow: hidden;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   margin: 5px;
   width: 40px;
-}
-
-.pixel-board {
-  border-collapse: collapse;
-  display: table;
-}
-
-.pixel-row {
-  display: table-row;
+  background-color: var(--iro-color-value);
 }
 
 .pixel {
@@ -24,11 +29,8 @@
   width: 40px;
 }
 
-.btn-clear {
-  margin: 10px 0;
-  padding: 5px;
-}
-
-.board-size {
-width: 40px;
+.img-perfil {
+  border-radius: 8rem;
+  width: 100px;
+  height: 100px;
 }

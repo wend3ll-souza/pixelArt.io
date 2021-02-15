@@ -1,24 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style.css">
-        <title>Paleta de Cores</title>
-    </head>
-    <body>
-        <header>
-            <h1 id="title">Paleta de Cores</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <title>Paleta de Cores</title>
+</head>
+
+<body>
+    <main class="row justify-content-center">
+        <header class="col-12 bg-info py-3 mb-5 shadow">
+            <h1 id="title" class="text-center lobster">Paleta de Cores</h1>
         </header>
-        <section id="color-palette"></section>
-        <button id="clear-board">Limpar</button>
-        <label for="board-size">Tamanho</label>
-        <input type="number" min='1' max='50' id="board-size" placeholder="Digite um número 5 a 50" value="">
-        <button id="button">+</button>
-        <label for="colors">Número de Cores</label>
-        <input type="number" min='1' max='50' id="colors" placeholder="Digite um número 5 a 50" value="">
-        <button id="colorNumber">+</button>
-        <section id="pixel-board"></section>
-    </body>
-    <script src="./script.js"></script>
+        <p class="w-50 p-2 bg-light">Digite uma cor <a href="" target="_blank">Hexadecimal</a> e clique em Trocar ou Use
+            o Picker para escolher a cor de sua preferência</p>
+        <div id="palleteAndButtons" class="d-flex justify-content-center col-12">
+            <section id="color-palette" class="m-3"></section>
+            <div>
+                <input type="text" id="values1" class="m-3" value>
+                <div class="col-12">
+                    <button class="btn btn-primary m-3" id="change-color">Trocar</button>
+                    <button class="btn btn-warning m-3" id="clear-board">Limpar</button>
+                </div>
+            </div>
+        </div>
+        <section class="m-3" id="pixel-board"></section>
+        <div id="picker"></div>
+    </main>
+    <footer id="contacts" class="bg-dark py-5 mt-5">
+        <section class="container d-flex justify-content-between">
+            <div class="row py-5">
+                <article id="moreAbout" class="col-lg-6 col-md-6 col-12 d-flex">
+                    <section class="container row d-flex align-items-center justify-content-around">
+                        <img class="img-perfil" src="./img/perfilImg.png" alt="foto de perfil">
+                        <p class="p-4 col-12 col-md-6 col-lg-6 text-white">Está página foi desenvolvida para compartilhar e colocar em
+                            prática meus estudos como <b>Desenvolverdor Full Stack</b>. Está em constante evolução,
+                            assim como meus conhecimentos. Visite meu <a target="_blank"
+                                href="https://www.linkedin.com/in/wendell-souza-5b13781a3/">LinkedIn</a> e não deixe de
+                            entrar em contato.</p>
+                    </section>
+                </article>
+                <div class="container d-flex row col-12 col-md-6 col-lg-6">
+                    <div class="col-lg-4 col-md-4 col-6">
+                        <h5 class="text-white">Entre em contato:</h5>
+                        <ul class="navbar-nav ml-auto" id="allLinks">
+                            <li class="list-item">
+                                <a target="_blank" class="mx-3"
+                                    href="https://www.linkedin.com/in/bm-wendell-souza-5b13781a3/">
+                                    <i class="fab fa-linkedin list-icon"> LinkedIn</i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a target="_blank" class="mx-3" href="https://github.com/wend3ll-souza">
+                                    <i class="fab fa-github-alt list-icon"> GitHub</i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a target="_blank" class="mx-3" href="https://twitter.com/Wend3llSouza">
+                                    <i class="fab fa-twitter list-icon"> Twitter</i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a target="_blank" class="mx-3" href="https://www.behance.net/wend3llsouza">
+                                    <i class="fab fa-behance-square list-icon"> Behance</i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a target="_blank" class="mx-3" href="mailto:wend3llsouza@gmail.com">
+                                    <i class="fab fa-behance-square list-icon"> Email</i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a target="_blank" class="mx-3"
+                                    href="https://api.whatsapp.com/send?phone=5519987650743">
+                                    <i class="fab fa-whatsapp list-icon"> WhatsApp</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+<script src="./script.js"></script>
+
 </html>
