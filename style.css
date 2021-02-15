@@ -6,6 +6,11 @@ body {
   background-color: rgba(85, 85, 85, 0.5);
 }
 
+.lobster {
+  font-family: lobster;
+  overflow: hidden;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -24,3 +29,8 @@ body {
   width: 40px;
 }
 
+.img-perfil {
+  border-radius: 8rem;
+  width: 100px;
+  height: 100px;
+}
