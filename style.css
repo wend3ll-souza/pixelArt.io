@@ -1,6 +1,11 @@
+* {
+  overflow-x: hidden;
+}
+
 body {
   background-color: rgba(85, 85, 85, 0.5);
 }
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -8,15 +13,6 @@ body {
   margin: 5px;
   width: 40px;
   background-color: var(--iro-color-value);
-}
-
-.pixel-board {
-  border-collapse: collapse;
-  display: table;
-}
-
-.pixel-row {
-  display: table-row;
 }
 
 .pixel {
@@ -28,11 +24,3 @@ body {
   width: 40px;
 }
 
-.btn-clear {
-  margin: 10px 0;
-  padding: 5px;
-}
-
-.board-size {
-width: 40px;
-}

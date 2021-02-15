@@ -4,22 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./bootstrap.css">
         <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script> 
         <title>Paleta de Cores</title>
     </head>
     <body>
-        <header>
-            <h1 id="title">Paleta de Cores</h1>
-        </header>
-        <section id="color-palette"></section>
-        <button id="clear-board">Limpar</button>
-        <button id="change-color">Change</button>
-        <label for="">#</label>
-        <input type="text" id="values1" class="" value>
-        <input type="text" id="values2" class="" value>
-        <input type="text" id="values3" class="" value>
+        <main class="row justify-content-center">
+            <header class="col-12 bg-info py-3 mb-5 shadow">
+                <h1 id="title" class="text-center">Paleta de Cores</h1>
+            </header>
+            <div id="palleteAndButtons" class="d-flex justify-content-center col-12">
+                <section id="color-palette" class=""></section>
+                <div class="">
+                    <input type="text" id="values1" class="" value>
+                    <button class="btn btn-primary" id="change-color">Change</button>
+                    <button class="btn btn-warning" id="clear-board">Limpar</button>
+                </div>
+            </div>
         <section id="pixel-board"></section>
         <div id="picker"></div>
+    </main>
     </body>
     <script src="./script.js"></script>
-</html>
+    </html>
